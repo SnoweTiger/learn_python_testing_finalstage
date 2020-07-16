@@ -38,3 +38,9 @@ class ProductPage(BasePage):
         product_price_text = product_price.text
         print('Selected price:',product_price_text,' Added price:', basket_price_text)
         assert (product_price_text == basket_price_text),'Added with another price'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE),"Success message is presented, but should not be"
+
+    def should_dissapear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE),"Success message is presented, but should not be"
