@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from .locators import BasePageLocators
 
 class BasePage():
-    def __init__(self, browser, url, timeout=10):
+    def __init__(self, browser, url, timeout=5):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
@@ -41,3 +41,7 @@ class BasePage():
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK),"Login link is not presented"
+
+    def open_basket_for_guest(self):
+        basket_button = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
+        basket_button.click()
