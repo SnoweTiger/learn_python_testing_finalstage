@@ -2,5 +2,19 @@
 Домашка к курсу Автоматизация тестирования с помощью Selenium и Python
 Глава 4
 
-активация selenium_env win7
-E:\MyProg\environments\selenium_env\Scripts\фсешмфеуюифе
+REQUIRED:
+python >= 3.8
+selenium == 3.14.0
+pytest == 5.1.1
+
+atomicwrites==1.4.0
+attrs==19.3.0
+colorama==0.4.3
+more-itertools==8.4.0
+packaging==20.4
+pluggy==0.13.1
+py==1.9.0
+pyparsing==2.4.7
+six==1.15.0
+urllib3==1.25.9
+wcwidth==0.2.5

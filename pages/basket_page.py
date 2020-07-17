@@ -15,8 +15,6 @@ class BasketPage(BasePage):
         "pt-br": "Sua cesta está vazia.","ro": "Cosul tau este gol.",
         "ru": "Ваша корзина пуста","sk": "Váš košík je prázdny",
         "uk": "Ваш кошик пустий.","zh-cn": "Your basket is empty."}
-
-        # print('message = ',basket_message_text,' exepted = ',message_dict['en'])
         assert (message_dict['en'] in basket_message_text ),'Basket is not empty'
 
     def check_empty_basket_for_guest(self):
